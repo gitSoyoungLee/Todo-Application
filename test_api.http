@@ -1,0 +1,96 @@
+
+
+###
+POST http://localhost:8080/todo/create
+Content-Type: application/json
+
+{
+  "title": "Example 1",
+  "content": "첫 번째 할 일"
+}
+
+###
+POST http://localhost:8080/todo/create
+Content-Type: application/json
+
+{
+  "title": "",
+  "content": ""
+}
+
+###
+POST http://localhost:8080/todo/create
+Content-Type: application/json
+
+{
+  "title": null,
+  "content": null
+}
+
+####
+POST http://localhost:8080/todo/create
+Content-Type: application/json
+
+{
+  "title": "Example 2",
+  "content": "두 번째 할 일"
+}
+
+###
+POST http://localhost:8080/todo/create
+Content-Type: application/json
+
+{
+  "title": "Example 3",
+  "content": "세 번째 할 일"
+}
+
+###
+GET http://localhost:8080/todo/load/list
+Accept: application/json
+
+###
+GET http://localhost:8080/todo/load/1
+Accept: application/json
+
+###
+GET http://localhost:8080/todo/load/5
+Accept: application/json
+
+###
+PUT http://localhost:8080/todo/update/3
+Content-Type: application/json
+
+{
+  "title": null,
+  "content": "수정 실패 test"
+}
+
+###
+PUT http://localhost:8080/todo/update/3
+Content-Type: application/json
+
+{
+  "title": "수정된 Example 3",
+  "content": "수정된 세 번째 할 일"
+}
+
+###
+GET http://localhost:8080/todo/load/3
+Accept: application/json
+
+###
+PUT http://localhost:8080/todo/update/5
+Content-Type: application/json
+
+{
+  "title": "No Such Element test",
+  "content": "test"
+}
+
+###
+DELETE http://localhost:8080/todo/delete/3
+
+###
+GET http://localhost:8080/todo/load/list
+Accept: application/json
